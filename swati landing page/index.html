@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bake My Day - Freshly Baked Happiness</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff7e9;
+            color: #5a3e36;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(45deg, #f6b7b5, #e47b79);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: #e47b79;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            transition: color 0.3s, transform 0.3s;
+        }
+        nav a:hover {
+            color: #a85856;
+            transform: scale(1.1);
+        }
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('images/hero.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        .hero h2 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .menu {
+            padding: 20px;
+            text-align: center;
+        }
+        .menu h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #e47b79;
+            border-bottom: 3px dashed #f6b7b5;
+            display: inline-block;
+        }
+        .menu-item {
+            display: inline-block;
+            margin: 15px;
+            text-align: center;
+            max-width: 300px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .menu-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .menu-item p {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #5a3e36;
+        }
+        .menu-item a {
+            text-decoration: none;
+            color: #e47b79;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 5px;
+            transition: color 0.3s, transform 0.3s;
+        }
+        .menu-item a:hover {
+            color: #a85856;
+            transform: scale(1.1);
+        }
+        .contact {
+            background-color: #fef3e6;
+            padding: 30px;
+            text-align: center;
+        }
+        .contact h2 {
+            font-size: 2rem;
+            color: #5a3e36;
+            margin-bottom: 20px;
+            border-bottom: 3px dotted #e47b79;
+            display: inline-block;
+        }
+        .contact form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #e47b79;
+            border-radius: 5px;
+        }
+        .contact button {
+            background-color: #e47b79;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact button:hover {
+            background-color: #a85856;
+        }
+        footer {
+            background: linear-gradient(45deg, #e47b79, #f6b7b5);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+            border-top: 2px solid #e47b79;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+        }
+        footer a:hover {
+            color: #a85856;
+        }
+        footer .designer {
+            margin-top: 10px;
+            font-size: 0.8rem;
+            color: #fff8f5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Bake My Day</h1>
+        <p>Your one-stop shop for freshly baked delights!</p>
+    </header>
+
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#menu">Our Menu</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero">
+        <h2>Where Every Day is a Sweet Day!</h2>
+    </section>
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>At Bake My Day, we believe in the power of freshly baked goods to bring happiness to every moment. 
+        From the rich aroma of freshly baked bread to the sweet delight of a warm muffin, our mission is to make 
+        every day a little sweeter. Established with a passion for baking and a commitment to quality, 
+        we offer a range of handcrafted products made with love and the finest ingredients.</p>
+        <p>Whether you're celebrating a special occasion or just craving something sweet, 
+        Bake My Day is here to make your day memorable. Step into our world of deliciousness 
+        and let us bring a smile to your face!</p>
+    </section>
+    
+    <style>
+        .about {
+            padding: 30px;
+            background-color: #fff7e9;
+            text-align: center;
+            color: #5a3e36;
+            line-height: 1.8;
+        }
+    
+        .about h2 {
+            font-size: 2rem;
+            color: #e47b79;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #f6b7b5;
+            display: inline-block;
+        }
+    
+        .about p {
+            margin: 10px 0;
+            font-size: 1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    
+
+    <section id="menu" class="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-item">
+            <img src="bread.jpg" alt="Breads">
+            <p>Breads</p>
+            <a href="bread flavour.html">View Flavors</a>
+        </div>
+        <div class="menu-item">
+            <img src="muffins.jpg" alt="Muffins">
+            <p>Muffins</p>
+            <a href="muffin flavour.html">View Flavors</a>
+        </div>
+        <div class="menu-item">
+            <img src="donut.jpg" alt="Donuts">
+            <p>Donuts</p>
+            <a href="donut flavour.html">View Flavors</a>
+        </div>
+        <div class="menu-item">
+            <img src="pie.jpg" alt="Pies">
+            <p>Pies</p>
+            <a href="pie flavour.html">View Flavors</a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form action="/submit" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Bake My Day. All rights reserved.</p>
+        <p class="designer">Designed by Swati Mishra</p>
+    </footer>
+</body>
+</html>
